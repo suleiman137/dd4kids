@@ -1,0 +1,100 @@
+/* CSS styles for normal screens */
+@media screen, projection {
+
+    /* CSS styles for the group control-div */
+    .groupControlDiv {
+        padding: 5px;
+    }	
+
+    /* CSS styles for the label of the group control-div */
+    .groupControlDivLabel {
+        cursor: default; 
+        background-color: #FFFFFF;
+        border: 2px solid #000000; 
+        text-align:center;
+        font: normal 14px Arial,sans-serif !important;
+        padding: 4px;
+    }	
+
+
+    /* CSS styles for the label of the group control-div */
+    .groupLayersDiv {
+        border: 1px solid #000000; 
+        background-color: #FFFFFF;
+        /* font: normal 12px Arial,sans-serif; */
+        visibility: hidden;
+        padding-left: 4px;
+        padding-right: 4px; 
+        position: absolute;
+        z-index: 100;
+        /* this value ensures that the div is not positioned below the map, which would lead to scrollbars */
+        top:32px; 
+    }	
+
+    /* the control of the position button */
+    #positionControlDiv {
+        margin-left: 15px;
+        border: 1px solid #000000;
+        background-color: #FFFFFF;
+    }                                 
+
+    /* the content of the position button's control' */
+    #positionControlContent {
+        cursor: pointer;
+        text-align: center;
+    }
+
+    /* use pointer as cursor inside the group's layers-div */
+    .groupLayersDiv input { cursor: pointer; }
+    .groupLayersDiv label { cursor: pointer; }
+
+
+    /* CSS style for the whole content of a marker's info window */
+    .infoWindowContent {
+        font: 14px verdana, arial, helvetica;
+    }
+
+    /* CSS style for the heading of a marker's info window */
+    .infoWindowHeading {
+        text-decoration: None;
+    }
+
+    /* CSS style for container of the marker filter control */
+    .filterControlContainer {
+        cursor: pointer;
+        border: 1px solid black;
+        background-color: white;
+        font: small Arial !important;
+        padding: 2px;
+        margin-right: 3px;
+        text-align: center;
+    }
+
+    .kartenbild { 
+        border: 1px solid #AAAAAA!important;
+        width: 150px;
+        margin: 8px 0!important;
+    }
+
+    .karte { 
+        font-size: 15px!important;
+        font-weight: 400!important;
+        font-family: "Helvetica", "Arial", sans-serif;
+    }
+
+    select { 
+        font-size: 14px;
+        font-weight: 400;
+        padding: 1px;
+    }
+}
+
+/* CSS styles for printing */
+@media print {
+    .gmnoprint, 
+    .filterControlContainer,
+    .groupControlDiv, 
+    .groupControlDivLabel,
+    .groupLayersDiv {
+        display: none;}
+}
